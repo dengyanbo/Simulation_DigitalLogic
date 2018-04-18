@@ -1,0 +1,12 @@
+module top
+wires 5
+  wire ieee 5
+  wire iit 5
+  wire ece 1
+  wire wh 1
+  wire sh 1
+components 2
+  component type name 1
+    pin ieee 5
+  component type2 name2 1
+    pin iit 5 3

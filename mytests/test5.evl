@@ -1,0 +1,12 @@
+module top;
+
+  wire a, b, c, d;
+
+  evl_zero(a);
+  evl_one(b, d);
+  
+  and(c, a, b);
+
+  evl_output sim_out(c, a, b, d);
+
+endmodule

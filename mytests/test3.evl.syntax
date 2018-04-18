@@ -1,0 +1,6 @@
+module top
+wires 1
+  wire s1234567 1
+components 1
+  component echo 1
+    pin e8d8

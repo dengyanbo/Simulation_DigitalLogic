@@ -1,0 +1,13 @@
+module name
+wires 4
+  wire s1 1
+  wire s2 1
+  wire s3 1
+  wire s5 1
+components 2
+  component echo1 3
+    pin s1
+    pin s2
+    pin s3 1
+  component echo2 1
+    pin s1 3 1

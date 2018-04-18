@@ -1,0 +1,133 @@
+module lfsr
+nets 13
+  net s[0] 4
+  evl_output sim_out 0
+  evl_output sim_out 10
+  evl_dff 0
+  evl_dff 1
+  net s[1] 4
+  evl_output sim_out 0
+  evl_output sim_out 9
+  evl_dff 0
+  evl_dff 1
+  net s[2] 4
+  evl_output sim_out 0
+  evl_output sim_out 8
+  evl_dff 0
+  evl_dff 1
+  net s[3] 4
+  evl_output sim_out 0
+  evl_output sim_out 7
+  evl_dff 0
+  evl_dff 1
+  net s[4] 4
+  evl_output sim_out 0
+  evl_output sim_out 6
+  evl_dff 0
+  evl_dff 1
+  net s[5] 4
+  evl_output sim_out 0
+  evl_output sim_out 5
+  evl_dff 0
+  evl_dff 1
+  net s[6] 5
+  evl_output sim_out 0
+  evl_output sim_out 4
+  evl_dff 0
+  evl_dff 1
+  xor 2
+  net s[7] 4
+  evl_output sim_out 0
+  evl_output sim_out 3
+  evl_dff 0
+  evl_dff 1
+  net s[8] 4
+  evl_output sim_out 0
+  evl_output sim_out 2
+  evl_dff 0
+  evl_dff 1
+  net s[9] 4
+  evl_output sim_out 0
+  evl_output sim_out 1
+  evl_dff 0
+  xor 1
+  net nx 2
+  xor 0
+  not 1
+  net x 2
+  evl_dff 1
+  not 0
+  net clk 11
+  evl_clock 0
+  evl_dff 2
+  evl_dff 2
+  evl_dff 2
+  evl_dff 2
+  evl_dff 2
+  evl_dff 2
+  evl_dff 2
+  evl_dff 2
+  evl_dff 2
+  evl_dff 2
+components 14
+  component evl_output sim_out 11
+    pin 10 s[0] s[1] s[2] s[3] s[4] s[5] s[6] s[7] s[8] s[9]
+    pin 1 s[9]
+    pin 1 s[8]
+    pin 1 s[7]
+    pin 1 s[6]
+    pin 1 s[5]
+    pin 1 s[4]
+    pin 1 s[3]
+    pin 1 s[2]
+    pin 1 s[1]
+    pin 1 s[0]
+  component evl_clock 1
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[0]
+    pin 1 x
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[1]
+    pin 1 s[0]
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[2]
+    pin 1 s[1]
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[3]
+    pin 1 s[2]
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[4]
+    pin 1 s[3]
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[5]
+    pin 1 s[4]
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[6]
+    pin 1 s[5]
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[7]
+    pin 1 s[6]
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[8]
+    pin 1 s[7]
+    pin 1 clk
+  component evl_dff 3
+    pin 1 s[9]
+    pin 1 s[8]
+    pin 1 clk
+  component xor 3
+    pin 1 nx
+    pin 1 s[9]
+    pin 1 s[6]
+  component not 2
+    pin 1 x
+    pin 1 nx

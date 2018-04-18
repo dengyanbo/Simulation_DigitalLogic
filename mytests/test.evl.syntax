@@ -1,0 +1,15 @@
+module top
+wires 3
+  wire s0 1
+  wire s1 1
+  wire clk 1
+components 3
+  component evl_clock 1
+    pin clk
+  component evl_dff 3
+    pin s0
+    pin s1
+    pin clk
+  component not 2
+    pin s1
+    pin s0

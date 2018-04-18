@@ -1,0 +1,26 @@
+module top
+nets 3
+  net clk 2
+  evl_clock 0
+  evl_dff 2
+  net D 3
+  evl_dff 1
+  not 0
+  evl_output sim_out 0
+  net Q 3
+  evl_dff 0
+  not 1
+  evl_output sim_out 1
+components 4
+  component evl_clock 1
+    pin 1 clk
+  component evl_dff 3
+    pin 1 Q
+    pin 1 D
+    pin 1 clk
+  component not 2
+    pin 1 D
+    pin 1 Q
+  component evl_output sim_out 2
+    pin 1 D
+    pin 1 Q

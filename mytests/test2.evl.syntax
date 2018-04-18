@@ -1,0 +1,8 @@
+module counter
+wires 1
+  wire s1 3
+components 2
+  component evl_count 1
+    pin golden
+  component evl_calcu 1
+    pin test
